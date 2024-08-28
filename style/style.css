@@ -1,0 +1,428 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --cor_fundo: #1E1D2A;
+    --cor_title: #FF7932;
+    --cor_text: #fff;
+    --cor_box: #FFEFE8;
+    --cor_card: #27272a;
+    --cor_cinza: #ccc;
+}
+
+/* cores antigas 
+    #F1F1F1
+    #11644d
+*/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    background-color: var(--cor_fundo);
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Header */
+
+header{
+    display: flex;
+    justify-content: space-between;
+    margin-inline: 5%;
+    padding-block: 1rem;
+    align-items: center;
+}
+
+
+.header_logo h2{
+    color: var(--cor_title);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.header_nav{
+    gap: 2rem;
+    display: flex;
+}
+
+.header_nav a{
+    text-decoration: none;
+    color: var(--cor_text);
+    font-size: 1.1rem;
+    font-weight: 400;
+    transition: all 0.3s ease;
+}
+
+.header_nav a:hover{
+    color: var(--cor_title);
+}
+
+.header_btn button{
+    background: none;
+    color: var(--cor_title);
+    border: 2px solid var(--cor_title);
+    padding: 0.5rem 1.5rem;
+    font-size: 1em;
+    border-radius: 0.5em;
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+}
+
+.header_btn button:hover {
+    border-color: #ccc;
+    box-shadow: 0 0.6em 0.6em -0.3em #ccc;
+    transform: translateY(-0.3em);
+}
+
+/* Main */
+
+main{
+    margin-inline: 5%;
+}
+
+/* Home */
+
+.home{
+    margin-top: 7rem;
+    display: flex;
+    padding: 2rem;
+}
+
+.home_left{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 5%;
+}
+
+.home_left h1{
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    line-height: 4rem;
+    max-width: 600px;
+    color: var(--cor_title);
+    margin-top: 1rem;
+}
+
+.home_left h1 span{
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px var(--cor_title);
+    font-size: 4rem;
+}
+
+.home_left h3{
+    color: var(--cor_box);
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-left: 0;
+}
+
+.home_left p{
+    color: var(--cor_cinza);
+    max-width: 70ch;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.home_left button{
+    width: 25%;
+    height: 3rem;
+    border-radius: 10px;
+    background-color: var(--cor_title);
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    color: var(--cor_text);
+}
+
+.home_left button:hover{
+    border-color: #ccc;
+    box-shadow: 0 0.6em 0.6em -0.3em #ccc;
+    transform: translateY(-0.3em);
+}
+
+.home_right{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home_right img{
+    max-width: 500px;
+}
+
+/* Receitas */
+
+.receitas{
+    margin-top: 7rem;
+    text-align: center;
+    margin-inline: 5%
+}
+
+.receitas h2{
+    color: var(--cor_text);
+    font-size: 17px;
+    text-align: center;
+}
+
+.receitas h3{
+    color: var(--cor_title);
+    font-size: 2.4rem;
+    font-weight: 600;
+}
+
+.receitas_subtitle{
+    padding-block: 1.5rem;
+    font-size: 1.2rem;
+    color: var(--cor_cinza);
+    max-width: 600px;
+    margin: auto;
+}
+
+.receitas_box{
+    display: grid;
+    margin-top: 3rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.receitas .receitas_box .receitas_cards{
+    flex: 1;
+}
+
+.receitas_cards{
+    background-color: var(--cor_card);
+    padding: 1rem;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.receitas_cards img{
+    width: 450px; 
+    height: 300px;   
+    margin: 0 auto;
+}
+
+.receitas_cards h3{
+    padding-block: 1rem;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.receitas_cards p{
+    color: var(--cor_cinza);
+    padding-bottom: 3rem;
+}
+
+.receitas_cards:hover{
+    border: 2px solid var(--cor_title);
+}
+
+/* Desafios */
+
+.desafio{
+    margin-inline: 10%;
+    margin-top: 10rem;
+}
+
+.desafio h2{
+    color: var(--cor_text);
+    font-size: 17px;
+    text-align: center;
+}
+
+.desafio h3{
+    color: var(--cor_title);
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: 600;
+    margin-bottom: 1.8rem;
+}
+
+.desafio_subtitle{
+    color: #ccc;
+    font-size: 1.2rem;
+    text-align: center;
+    max-width: 600px;
+    margin: auto;
+}
+
+.desafio_box{
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.desafio .desafio_box .desafio_card{
+    flex: 1;
+}
+
+.desafio_card{
+    background-color: #27272a;
+    padding: 1rem;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.desafio_card:hover{
+    border: 2px solid var(--cor_title);
+}
+
+.desafio_card h3{
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding-top: 2rem;
+    padding-left: 1rem;
+}
+
+.desafio_card h4{
+    color: #fff;
+    font-size: 1.5rem;
+    padding-left: 1rem;
+    padding-top: 1rem;
+}
+
+.desafio_card span{
+    color: #fff;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    margin-bottom: 5rem;
+    font-size: 1.3rem
+}
+
+.desafio_card p{
+    padding-left: 1rem;
+    padding-block: 0.3rem;
+    color: #ccc;
+    font-size: 1rem;
+    text-align: center;
+    display: flex;
+}
+
+.desafio_card p i{
+    color: #ccc;
+    font-size: 1.2rem;
+    margin-right: 0.3rem;
+}
+
+.desafio .desafio_card button{
+    color: #fff;
+    background-color: transparent;
+    border: 2px solid #fff;
+    width: 100%;
+    padding-block: 16px;
+    border-radius: 8px;
+    margin-top: 2rem;
+    margin-bottom: 20px;
+}
+
+.desafio .desafio_card button:hover{
+    background-color: var(--cor_title);
+    border-color: var(--cor_title);
+}
+
+/* Meditacao */
+
+.meditacao{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 200px;
+}
+
+.meditacao h2{
+    color: var(--cor_text);
+    font-size: 17px;
+}
+
+.meditacao h3{
+    color: var(--cor_title);
+    font-size: 2.4rem;
+}
+
+.meditation{
+    display: flex;
+    width: 70%;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 5rem;
+}
+
+.meditation_itens img{
+    width: 110px;
+}
+
+.meditation_itens{
+    text-align: center;
+    justify-content: space-around;
+}
+
+.meditation_itens h4{
+    color: var(--cor_title);
+    font-size: 1.5rem;
+}
+
+.meditation_itens p{
+    color: var(--cor_cinza);
+    font-size: 1.1rem;
+    max-width: 350px;
+    margin-top: 25px;
+}
+
+/* Contatos */
+
+.contatos{
+    margin-top: 12rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contatos h2{
+    color: var(--cor_text);
+    font-size: 17px;
+}
+
+.contatos h3{
+    color: var(--cor_title);
+    font-size: 2.4rem;
+}
+
+.contatos_icons{
+    width: 30%;
+    margin-top: 50px;
+}
+
+.contatos_icons i{
+    font-size: 50px;
+    color: var(--cor_cinza);
+    padding: 30px;
+}
+
+footer{
+    background-color: #000;
+    color: #ccc;
+    text-align: center;
+    margin-top: 5rem;
+}
